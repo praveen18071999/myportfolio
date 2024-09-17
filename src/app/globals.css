@@ -37,6 +37,7 @@ h4,
 h5,
 h6 {
   font-family: font-erif;
+  font-weight: 500;
 }
 
 @layer base {
