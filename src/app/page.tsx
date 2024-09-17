@@ -3,7 +3,6 @@ import Image from "next/image";
 import React from "react";
 import { Button } from "@/components/ui/button"
 import Link from "next/link";
-import { Progress } from "@/components/ui/progress"
 import education from "../images/education.jpg"
 import project from "../images/projects.jpg"
 import experience from "../images/expereince.jpg"
@@ -11,6 +10,28 @@ import profile from "../images/profile.jpeg"
 import resume from "../images/resume.jpg"
 import { GithubIcon, LinkedinIcon, MailIcon, TwitterIcon, ArrowLeftIcon } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import c from "../images/letter-c.png"
+import cplusplus from "../images/cplusplus.png"
+import java from "../images/java.png"
+import csharp from "../images/csharp.png"
+import javascript from "../images/javascript.png"
+import jquery from "../images/JQuery.png"
+import html from "../images/html.png"
+import postman from "../images/postman.png"
+import ml from "../images/ml.png"
+import mongodb from "../images/mongo.png"
+import git from "../images/git.png"
+import power from "../images/growth.png"
+import ds from "../images/data-science.png"
+import docker from "../images/docker.png"
+import python from "../images/python.png"
+import bootstrap from "../images/bootstrap.png"
+import crm from "../images/dynamics.png"
+import css from "../images/css.png"
+import sql from "../images/sql-server.png"
+import react from "../images/react.png"
+import angular from "../images/angular.png"
+
 import "./globals.css";
 
 
@@ -84,28 +105,34 @@ const ExploreFunction = () => {
     { date: "Nov 2020", color: "#a8a29e", title: "Software Intern", description: "Started My career as Software Intern at MAQ Software" },
     { date: "June 2017", color: "#a8a29e", title: "Started Bachelors", description: "Started my Bachelors in Computer Science and Engineering at CMR College Of Engineering & Technology, Hyderabad." }
   ]
-  const skills = [
-    { name: 'C', level: 90 },
-    { name: 'C++', level: 90 },
-    { name: 'Java', level: 60 },
-    { name: 'JQuery', level: 90 },
-    { name: 'HTML', level: 85 },
-    { name: 'CSS', level: 85 },
-    { name: 'Tailwind', level: 85 },
-    { name: 'React', level: 90 },
-    { name: 'JavaScript', level: 90 },
-    { name: 'Node.js', level: 85 },
-    { name: 'Next.js', level: 85 },
-    { name: 'TypeScript', level: 80 },
-    { name: 'Python', level: 75 },
-    { name: 'SQL', level: 85 },
-    { name: 'MongoDB', level: 85 },
-    { name: 'GraphQL', level: 70 },
-    { name: 'AWS', level: 65 },
-    { name: 'Power Automate(Cloud)', level: 90 },
-    { name: 'Power Automate(Desktop)', level: 90 },
-    { name: 'Dynamics 365', level: 90 },
-    { name: 'Power Pages', level: 90 }
+
+
+  const allSkills = [
+    {
+      programmingLanguages:
+        [{ logo: c, alt: "C Language" },
+        { logo: cplusplus, alt: "C++ Language" },
+        { logo: javascript, alt: "JavaScript" },
+        { logo: python, alt: "Python" },
+        { logo: jquery, alt: "JQuery" },
+        { logo: csharp, alt: "CSharp" },
+        { logo: java, alt: "Java" },
+        { logo: html, alt: "HTML" },
+        { logo: css, alt: "CSS" },
+        { logo: bootstrap, alt: "Bootstrap" },
+        { logo: git, alt: "Git" },
+        { logo: ds, alt: "Data Science" },
+        { logo: docker, alt: "Docker" },
+        { logo: mongodb, alt: "MongoDB" },
+        { logo: sql, alt: "SQL" },
+        { logo: postman, alt: "PostMan" },
+        { logo: ml, alt: "Machine Learning" },
+        { logo: react, alt: "React Framework" },
+        { logo: power, alt: "Power BI" },
+        { logo: crm, alt: "Dynamics CRM" },
+        { logo: angular, alt: "Angualr Framework" }
+        ]
+    }
   ]
   return (
     <section id="explore" className="py-20 bg-muted/50">
@@ -145,15 +172,13 @@ const ExploreFunction = () => {
           {/* Skills */}
           <div className="container">
             <h3 className="text-2xl font-semibold text-center mb-6">Skills</h3>
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4">
-              {skills.map((skill) => (
-                <div key={skill.name} className="bg-background shadow-lg rounded-lg p-4">
-                  <div className="flex justify-between mb-2">
-                    <span className="font-semibold">{skill.name}</span>
-                    <span className="text-muted-foreground">{skill.level}%</span>
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-6">
+              {allSkills.map((skill, index) => (
+                skill.programmingLanguages.map((languages, i) => (
+                  <div key={i + index} className="rounded-lg p-1">
+                    <Image src={languages.logo.src} className="rounded-full" alt={languages.alt} width={80} height={80} ></Image>
                   </div>
-                  <Progress value={skill.level} className="w-full" />
-                </div>
+                ))
               ))}
             </div>
           </div>
