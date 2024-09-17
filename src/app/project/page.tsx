@@ -10,7 +10,7 @@ const projects = [
         description: "My Portfolio website built with Next.js and Tailwind CSS",
         tags: ["React", "Next.js", "Tailwind.CSS"],
         liveUrl: "",
-        githubUrl: ""
+        githubUrl: "https://github.com/praveen18071999/myportfolio"
     }
 ]
 
