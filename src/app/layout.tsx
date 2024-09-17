@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const date = new Date()
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   return (
     <html lang="en">
@@ -83,7 +83,7 @@ export default function RootLayout({
                 <span className="sr-only">Email</span>
               </a>
             </div>
-            <p className="text-muted-foreground">&copy; 2023 Jane Doe. All rights reserved.</p>
+            <p className="text-muted-foreground">&copy; {date.getFullYear()} Praveen Kumar. All rights reserved.</p>
           </div>
         </footer>
       </body>

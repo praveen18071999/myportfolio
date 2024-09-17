@@ -6,7 +6,7 @@ import Link from "next/link";
 import education from "../images/education.jpg"
 import project from "../images/projects.jpg"
 import experience from "../images/expereince.jpg"
-import profile from "../images/profile.jpeg"
+import profile from "../images/profile1.jpeg"
 import resume from "../images/resume.jpg"
 import { GithubIcon, LinkedinIcon, MailIcon, TwitterIcon, ArrowLeftIcon } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -57,9 +57,9 @@ function Portfolio() {
             <Image
               src={profile}
               alt="Praveen Kumar"
-              className="rounded-full"
-              width={150}
-              height={150}
+              className="rounded-full p-4"
+              width={250}
+              height={250}
             />
             <div className="flex space-x-4">
               <a href="https://github.com/praveen18071999" className="text-muted-foreground hover:text-primary transition-colors">
@@ -130,7 +130,7 @@ const ExploreFunction = () => {
         { logo: react, alt: "React Framework" },
         { logo: power, alt: "Power BI" },
         { logo: crm, alt: "Dynamics CRM" },
-        { logo: angular, alt: "Angualr Framework" }
+        { logo: angular, alt: "Angular Framework" }
         ]
     }
   ]
