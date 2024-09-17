@@ -175,7 +175,7 @@ const ExploreFunction = () => {
             <div className="flex flex-wrap gap-4">
               {allSkills.map((skill, index) => (
                 skill.programmingLanguages.map((languages) => (
-                  <div key={index} className="p-4">
+                  <div key={index} className="p-10">
                     <Image src={languages.logo.src} className="rounded-full" alt={languages.alt} width={80} height={80} ></Image>
                   </div>
                 ))
