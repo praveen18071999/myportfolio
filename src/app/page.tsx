@@ -144,7 +144,7 @@ const ExploreFunction = () => {
 
             <div className="flex flex-col items-center space-y-4">
               {myJourney.map((stage, index) => (
-                <div key={index} className="w-full max-w-md shadow-lg">
+                <div key={index} className="w-full max-w-md">
                   <Card className="lg:w-full md:w-80 sm:w-20">
                     <CardHeader className="flex flex-row items-center space-x-4">
                       <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: stage.color }}>
@@ -160,7 +160,7 @@ const ExploreFunction = () => {
                   </Card>
                   {index < myJourney.length - 1 && (
                     <div className="flex justify-center my-2">
-                      <ArrowLeftIcon className="w-6 h-6 text-gray-400 transform rotate-90" />
+                      <ArrowLeftIcon className="w-6 h-6 text-black-400 transform rotate-90" />
                     </div>
                   )}
                 </div>
