@@ -31,6 +31,9 @@ export default function RootLayout({
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   return (
     <html lang="en">
+      <title>Protfolio</title>
+      <meta name="description" content="Explore my Protfolio." />
+      <link rel="icon" href="/favicon.ico" />
       <body
         className={`${geistSans.variable} ${geistMono.variable} bg-gray-100 antialiased`}
       >
