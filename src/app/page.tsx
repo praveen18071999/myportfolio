@@ -81,7 +81,7 @@ function Portfolio() {
             <p className="text-lg md:text-xl mb-4 text-muted-foreground">Ex - Senior Software Engineer | Ex - Software Engineer</p>
             <p className="text-lg md:text-xl mb-4 text-muted-foreground">Experienced Software Developer skilled in designing, coding, and testing software applications across various platforms. Proficient in multiple programming languages, including Python, Java, and JavaScript, with a strong understanding of software development methodologies like Agile and Scrum. Adept at collaborating with cross-functional teams to deliver efficient, scalable, and user-focused solutions.</p>
             <Button asChild>
-              <a href="/contact">Get in touch</a>
+              <Link href="/contact">Get in touch</Link>
             </Button>
           </div>
 
@@ -172,10 +172,10 @@ const ExploreFunction = () => {
           {/* Skills */}
           <div className="container">
             <h3 className="text-2xl font-semibold text-center mb-6">Skills</h3>
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-6">
+            <div className="flex flex-wrap gap-4">
               {allSkills.map((skill, index) => (
-                skill.programmingLanguages.map((languages, i) => (
-                  <div key={i + index} className="rounded-lg p-1">
+                skill.programmingLanguages.map((languages) => (
+                  <div key={index} className="p-4">
                     <Image src={languages.logo.src} className="rounded-full" alt={languages.alt} width={80} height={80} ></Image>
                   </div>
                 ))

@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { Button } from "@/components/ui/button"
 import { MenuIcon, XIcon, GithubIcon, LinkedinIcon, MailIcon, TwitterIcon } from 'lucide-react'
 import Image from 'next/image';
+import profile from "../images/profile1.jpeg"
 
 import "./globals.css";
 import { useState } from "react";
@@ -36,7 +37,7 @@ export default function RootLayout({
         <header className="sticky top-0 z-10 bg-background/80 backdrop-blur-sm">
           <div className="container mx-auto px-4 py-4 flex justify-between items-center bg-slate-100">
             <div className="flex items-center space-x-2">
-              <Image src="/favicon.ico" alt="Favicon" width={32} height={32} />
+              <Image src={profile} className="rounded-full" alt="Favicon" width={32} height={32} />
               <h1 className="text-2xl font-bold font-mono">
                 Praveen Kumar Gangapuram
               </h1>
