@@ -35,7 +35,7 @@ export default function RootLayout({
       <meta name="description" content="Explore my Protfolio." />
       <link rel="icon" href="/favicon.ico" />
       <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-white antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable}  antialiased`}
       >
         <header className="sticky top-0 z-10 bg-background/80 backdrop-blur-sm">
           <div className="container mx-auto px-4 py-4 flex justify-between items-center bg-slate-100">
