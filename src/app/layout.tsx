@@ -35,17 +35,17 @@ export default function RootLayout({
       <meta name="description" content="Explore my Protfolio." />
       <link rel="icon" href="/favicon.ico" />
       <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-transparent antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <header className="sticky top-0 z-10 bg-background/80 backdrop-blur-sm">
-          <div className="container mx-auto px-4 py-4 flex justify-between items-center bg-slate-100">
+          <div className="container mx-auto px-4 py-4 flex justify-between items-center">
             <div className="flex items-center space-x-2">
               <Image src={profile} className="rounded-full" alt="Favicon" width={32} height={32} />
               <h1 className="text-2xl font-bold font-mono">
                 Praveen Kumar Gangapuram
               </h1>
             </div>
-            <nav className="hidden md:flex space-x-4 bg-transparent">
+            <nav className="dark hidden md:flex space-x-4">
               <Link href="/" className="hover:text-primary transition-colors font-mono">Home</Link>
               <Link href="/education" className="hover:text-primary transition-colors font-mono">Education</Link>
               <Link href="/project" className="hover:text-primary transition-colors font-mono">Projects</Link>
@@ -57,7 +57,7 @@ export default function RootLayout({
           </div>
           {isMenuOpen && (
             <nav className="md:hidden bg-transparent backdrop-blur-sm">
-              <div className="container mx-auto px-4 py-2 flex flex-col space-y-2 bg-slate-100">
+              <div className="container mx-auto px-4 py-2 flex flex-col space-y-2">
                 <Link href="/" className="hover:text-primary transition-colors" onClick={toggleMenu}>Home</Link>
                 <Link href="/education" className="hover:text-primary transition-colors" onClick={toggleMenu}>Education</Link>
                 <Link href="/project" className="hover:text-primary transition-colors" onClick={toggleMenu}>Projects</Link>
