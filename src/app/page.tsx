@@ -140,7 +140,7 @@ const ExploreFunction = () => {
         <h2 className="text-3xl font-bold mb-12 text-center">Explore My World</h2>
         <div className="flex flex-col md:flex-row gap-10">
           <div className="container">
-            <h3 className="text-2xl font-semibold text-center mb-6">My Journey</h3>
+            <h3 className="text-2xl font-bold text-center mb-6">My Journey</h3>
 
             <div className="flex flex-col items-center space-y-4">
               {myJourney.map((stage, index) => (
@@ -171,7 +171,7 @@ const ExploreFunction = () => {
 
           {/* Skills */}
           <div className="container">
-            <h3 className="text-2xl font-semibold text-center mb-6">Skills</h3>
+            <h3 className="text-2xl font-bold text-center mb-6">Skills</h3>
             <div className="flex flex-wrap gap-4">
               {allSkills.map((skill, index) => (
                 skill.programmingLanguages.map((languages) => (
